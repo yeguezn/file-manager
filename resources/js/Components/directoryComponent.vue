@@ -4,6 +4,8 @@ import deleteButtonComponent from './deleteButtonComponent.vue'
 defineProps({fullPath:String})
 
 function formatDirectoryPath(fullPath){
+    /*turn parent_directory from directory/subdirectory 
+    into directory-subdirectory */
     return fullPath.replace(/\//g, '-')
 }
 

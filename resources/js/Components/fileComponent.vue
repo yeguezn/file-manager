@@ -18,11 +18,15 @@ function checkFileNameLength(path){
 }
 
 function deleteFileRoute(path){
+    /*turn parent_directory from directory/subdirectory 
+    into directory-subdirectory */
     let formatedPath = path.replace(/\//g, "-")
     return `/delete-file/${formatedPath}`
 }
 
 function downloadFileRoute(path){
+    /*turn parent_directory from directory/subdirectory 
+    into directory-subdirectory */
     let formatedPath = path.replace(/\//g, "-")
     return `/download-file/${formatedPath}`
 }
