@@ -63,7 +63,7 @@ Route::controller(FileController::class)->group(function(){
     ->where("path", "^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*-[a-zA-Z0-9]+\.[a-z0-9]+$")
     ->missing(function (){
         return Inertia::render("notFoundPage");
-    });;
+    });
 
     Route::get("/download-file/{path}", "download")
     ->where("path", "^[a-zA-Z0-9]+(-[a-zA-Z0-9]+)*-[a-zA-Z0-9]+\.[a-z0-9]+$")
