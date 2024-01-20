@@ -109,6 +109,13 @@ class DirectoryController extends Controller
      */
     public function destroy(string $path)
     {
+        /*it is not allowed to delete the public directory
+        because it is folder where all files and directories
+        created by the user are saved*/
+        if ($path == "public") {
+            return Inertia::render("notFoundPage");    
+        }
+
         /*turn path from directory-subdirectory 
         into directory/subdirectory */
         $path = preg_replace("/-/", "/", $path);
