@@ -24,7 +24,7 @@ use Inertia\Inertia;
 | In order to access files or directories, in most cases you will need the
 | path for any of these. But you cannot access the content of a directory or 
 | managing a file using this format: public/subdirectory/... ; You will need to
-| use the following ones:
+| use the following formats:
 |
 | public-subdirectory --> to access the content of a directory.
 | public-subdirectory-test.txt --> to manage any files with extensions
@@ -32,7 +32,7 @@ use Inertia\Inertia;
 | 
 | All the directories you create or files you upload will be saved within a folder
 | called public and this folder is located in the following path: 
-| files-app/storage/public
+| files-app/storage
 |
 */
 
