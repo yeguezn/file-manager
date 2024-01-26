@@ -10,7 +10,7 @@ use Inertia\Inertia;
 class FileController extends Controller
 {
 
-    public function checkFileExists(String $path){
+    protected function checkFileExists(String $path){
         $parent_directory = dirname($path);
         $all_files = Storage::allFiles($parent_directory);
         return in_array($path, $all_files);
