@@ -25,7 +25,7 @@ mv .env.example .env
 
 4. Run the following command in order to create a docker image
 ```bash
-docker run -t files .
+docker build -t files .
 ```
 5. Create a docker volume in order to persistent the files you upload or the directories you create. For the volume name you can choose whatever you want (run this command only the first time you test this app)
 ```bash
