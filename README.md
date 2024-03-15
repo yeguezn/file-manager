@@ -17,15 +17,18 @@ git clone https://github.com/yeguezn/file-manager.git
 ```bash
 cd file-manager
 ```
-3. Run the following command in order to create a docker image
+
+3. Rename the `.env.example` to `.env`
+
+4. Run the following command in order to create a docker image
 ```bash
 docker run -t files .
 ```
-4. Create a docker volume in order to persistent the files you upload or the directories you create. For the volume name you can choose whatever you want (run this command only the first time you test this app)
+5. Create a docker volume in order to persistent the files you upload or the directories you create. For the volume name you can choose whatever you want (run this command only the first time you test this app)
 ```bash
 docker volume create <YOUR-VOLUME-NAME>
 ```
-5. Run the backend with this command
+6. Run the backend with this command
 ```bash
 docker run -it -v <YOUR-VOLUME-NAME>:/app/storage/app/public/ -p 8000:8000 files
 ```
@@ -33,10 +36,10 @@ docker run -it -v <YOUR-VOLUME-NAME>:/app/storage/app/public/ -p 8000:8000 files
 ```bash
 docker run -it -v <YOUR-VOLUME-NAME>:/app/storage/app/public/ -h <YOUR-IP-ADDRESS> -p 8000:8000 files
 ```
-6. Open a new terminal tab and run the following command for the frontend
+7. Open a new terminal tab and run the following command for the frontend
 ```bash
 docker exec <CONTAINER-ID> npm run build
 ```
 (You can get the CONTAINER-ID running the `docker ps` command)
 
-7. Open the following link in the browser http://localhost:8000/
+8. Open the following link in the browser http://localhost:8000/
