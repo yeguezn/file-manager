@@ -19,6 +19,9 @@ cd file-manager
 ```
 
 3. Rename the `.env.example` to `.env`
+```bash
+mv .env.example .env
+```
 
 4. Run the following command in order to create a docker image
 ```bash
