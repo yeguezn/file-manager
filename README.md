@@ -18,7 +18,7 @@ git clone https://github.com/yeguezn/file-manager.git
 cd file-manager
 ```
 
-3. Rename the `.env.example` to `.env`
+3. Rename the `.env.example` file to `.env`
 ```bash
 mv .env.example .env
 ```
