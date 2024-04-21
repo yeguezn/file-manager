@@ -1,0 +1,17 @@
+version: '3'
+
+networks:
+  mynetwork:
+    driver: bridge
+
+services:
+  app:
+    build: .
+    container_name: files-app
+    ports:
+      - 8000:8000
+    volumes:
+      - ./storage/app/public/:/var/www/html/storage/app/public/
+    
+    networks:
+      - mynetwork

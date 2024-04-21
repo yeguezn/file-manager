@@ -13,9 +13,9 @@ RUN apt-get update -y && apt-get install -y \
     libjpeg62-turbo-dev \
     libpng-dev
 
-WORKDIR /app
+WORKDIR /var/www/html
 
-COPY . /app
+COPY . .
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
@@ -28,7 +28,6 @@ RUN echo "file_uploads = On\n" \
          "max_execution_time = 1200\n" \
          > /usr/local/etc/php/conf.d/uploads.ini
 
-RUN docker-php-ext-install gettext intl pdo_mysql gd
 
 RUN docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg \
     && docker-php-ext-install -j$(nproc) gd
