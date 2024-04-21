@@ -11,47 +11,46 @@
 
 # Set Up
 1. Clone this repository
-```bash
-git clone https://github.com/yeguezn/file-manager.git
-```
+    
+    ```bash
+    git clone https://github.com/yeguezn/file-manager.git
+    ```
 
 2. Get into the repositoy and rename the .env.example file to .env
 
-Linux
-```bash
-cd file-manager
-mv .env.example .env
-```
-
-Windows
-```bash
-cd file-manager
-rename ".env.example" ".env"
-```
+    ## Linux
+    ```bash
+    cd file-manager
+    mv .env.example .env
+    ```
+    ## Windows
+    ```bash
+    cd file-manager
+    rename ".env.example" ".env"
+    ```
 
 3. Run the `docker compose up` command
 
-Linux
-```bash
-sudo docker compose up -d
-```
+    ## Linux
+    ```bash
+    sudo docker compose up -d
+    ```
 
-Windows
-```bash
-docker compose up -d
-```
+    ## Windows
+    ```bash
+    docker compose up -d
+    ```
 
 4. Run the following command to turn on the frontend server
 
-Linux
-```bash
-sudo docker exec files-app npm run build
-```
-
-Windows
-```bash
-docker exec files-app npm run build
-```
+    ## Linux
+    ```bash
+    sudo docker exec files-app npm run build
+    ```
+    ## Windows
+    ```bash
+    docker exec files-app npm run build
+    ```
 
 5. Open this link in your browser: [localhost:8000/](localhost:8000/)
 
