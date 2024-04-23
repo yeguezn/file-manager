@@ -16,17 +16,15 @@
     git clone https://github.com/yeguezn/file-manager.git
     ```
 
-2. Get into the repositoy and rename the .env.example file to .env
+2. Get into the repositoy
 
     ## Linux
     ```bash
     cd file-manager
-    mv .env.example .env
     ```
     ## Windows
     ```bash
     cd file-manager
-    rename ".env.example" ".env"
     ```
 
 3. Run the `docker compose up` command

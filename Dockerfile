@@ -17,6 +17,8 @@ WORKDIR /var/www/html
 
 COPY . .
 
+RUN mv .env.example .env
+
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 RUN echo 'ServerName 127.0.0.1' >> /etc/apache2/apache2.conf
