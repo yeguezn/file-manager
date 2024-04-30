@@ -10,24 +10,13 @@
 - Access on any device connected to your LAN
 
 # Set Up
-1. Clone this repository
+1. Clone this repository and get into this repositoy
     
     ```bash
-    git clone https://github.com/yeguezn/file-manager.git
+    git clone https://github.com/yeguezn/file-manager.git && cd file-manager
     ```
 
-2. Get into the repositoy
-
-    ## Linux
-    ```bash
-    cd file-manager
-    ```
-    ## Windows
-    ```bash
-    cd file-manager
-    ```
-
-3. Run the `docker compose up` command
+2. Run the `docker compose up` command
 
     ## Linux
     ```bash
@@ -39,7 +28,7 @@
     docker compose up -d
     ```
 
-4. Run the following command to turn on the frontend server
+3. Run the following command to turn on the frontend server
 
     ## Linux
     ```bash
@@ -50,7 +39,7 @@
     docker exec files-app npm run build
     ```
 
-5. Open this link in your browser: [localhost:8000/](localhost:8000/)
+4. Open this link in your browser: http://localhost:8000/
 
 Now you can use this app on your computer and on any device connected to your LAN (Local Area Network). If you want to access the app on your smart phone or other device you must put in the browser the IP address of the computer you are running the app on, followed by the port 8000.
 
